@@ -1,0 +1,85 @@
+<div class="row" *ngIf="user">
+  <div class="col-sm-4">
+    <img src="assets/placeholder.gif">
+  </div>
+
+  <div class="col-sm-8">
+    <form class="form-horizontal">
+
+      <!-- identifiant -->
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Id</label>
+        <div class="col-sm-10">
+           <p
+            *ngIf="user.id"
+            class="form-control-static">{{ user.id }}</p>
+        </div>
+      </div>
+
+      <!-- nom -->
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Nom</label>
+        <div class="col-sm-10">
+          <input
+            *ngIf="user.enabled"
+            type="text"
+            class="form-control"
+            name="name"
+            [(ngModel)]="user.name">
+
+          <p
+            *ngIf="!user.enabled"
+            class="form-control-static">
+            {{ user.name }}
+          </p>
+        </div>
+      </div>
+
+      <!-- pseudo -->
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Pseudo</label>
+        <div class="col-sm-10 text-lowercase">
+          <input
+            *ngIf="user.enabled"
+            type="text"
+            class="form-control"
+            name="username"
+            [(ngModel)]="user.username">
+
+          <p
+            *ngIf="!user.enabled"
+            class="form-control-static">
+            {{ user.username }}
+          </p>
+        </div>
+      </div>
+
+      <!-- email -->
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10 text-lowercase">
+          <input
+            *ngIf="user.enabled"
+            type="text"
+            class="form-control"
+            name="email"
+            [(ngModel)]="user.email">
+
+          <p
+            *ngIf="!user.enabled"
+            class="form-control-static">
+            {{ user.email }}
+          </p>
+        </div>
+      </div>
+
+      <!-- adresse -->
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Adresse</label>
+        <div class="col-sm-10">
+          <model-adresse [address]="user.address"></model-adresse>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
