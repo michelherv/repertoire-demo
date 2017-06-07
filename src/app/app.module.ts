@@ -14,8 +14,7 @@ import {
 } from './composants';
 import {
   DetailComponent,
-  ListComponent,
-  MiseAJourComponent
+  ListComponent
 } from './views';
 
 
@@ -33,8 +32,7 @@ import {
     UtilisateurComponent,
 
     DetailComponent,
-    ListComponent,
-    MiseAJourComponent
+    ListComponent
   ],
   providers: [
     UserService

@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 import {
   DetailComponent,
-  ListComponent,
-  MiseAJourComponent
+  ListComponent
 } from './views/user';
 
 
@@ -16,9 +15,6 @@ export const APP_ROUTES: Routes = [
       }, {
         path: ':id',
         component: DetailComponent
-      }, {
-        path: ':id/updating',
-        component: MiseAJourComponent
       }
     ]
   }, {
