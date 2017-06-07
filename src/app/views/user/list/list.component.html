@@ -1,7 +1,9 @@
 
-<div class="row">
+<div
+  *ngIf="users"
+  class="row">
   <div class="col-sm-offset-2 col-sm-8 text-right text-muted">
-    {{ users && users.length }} utilisateurs
+    {{ users.length }} utilisateurs
   </div>
 </div>
 
@@ -12,13 +14,7 @@
         <li
           *ngFor="let user of users"
           class="list-group-item">
-          <span>{{ user.name }}</span>
-          <button
-            type="button"
-            class="close"
-            (click)="doRemove(user)">
-            &times;
-          </button>
+          {{ user.name }}
         </li>
       </ul>
     </div>

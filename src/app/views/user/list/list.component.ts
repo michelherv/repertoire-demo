@@ -19,10 +19,4 @@ export class ListComponent implements OnInit {
       this.users = users;
     });
   }
-
-  doRemove(user: UserDto) {
-    this.userService.remove(user.id).subscribe(next => {
-      this.users = this.users.filter(item => item.id !== user.id);
-    });
-  }
 }
