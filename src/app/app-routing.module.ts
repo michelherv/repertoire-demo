@@ -1,8 +1,5 @@
 import { Routes } from '@angular/router';
-import {
-  DetailComponent,
-  ListComponent
-} from './views/user';
+import { ListComponent } from './views/user';
 
 
 export const APP_ROUTES: Routes = [
@@ -12,9 +9,6 @@ export const APP_ROUTES: Routes = [
       {
         path: '',
         component: ListComponent
-      }, {
-        path: ':id',
-        component: DetailComponent
       }
     ]
   }, {

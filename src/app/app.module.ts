@@ -12,10 +12,7 @@ import {
   AdresseComponent,
   UtilisateurComponent
 } from './composants';
-import {
-  DetailComponent,
-  ListComponent
-} from './views';
+import { ListComponent } from './views';
 
 
 @NgModule({
@@ -31,7 +28,6 @@ import {
     AdresseComponent,
     UtilisateurComponent,
 
-    DetailComponent,
     ListComponent
   ],
   providers: [

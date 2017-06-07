@@ -12,7 +12,7 @@
         <li
           *ngFor="let user of users"
           class="list-group-item">
-          <a [routerLink]="[ user.id ]">{{ user.name }}</a>
+          <span>{{ user.name }}</span>
           <button
             type="button"
             class="close"
